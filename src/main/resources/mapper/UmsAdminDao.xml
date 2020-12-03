@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.javatech.tdd.dao.UmsAdminDao">
+    <select id="selectByUsername" parameterType="java.lang.String" resultMap="com.javatech.tdd.mbg.mapper.UmsAdminMapper.BaseResultMap">
+        select
+        <include refid="com.javatech.tdd.mbg.mapper.UmsAdminMapper.Base_Column_List" />
+        from ums_admin
+        where username = #{username,jdbcType=VARCHAR}
+    </select>
+</mapper>
