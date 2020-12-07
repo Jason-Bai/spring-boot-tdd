@@ -55,7 +55,7 @@ public class ResponseBody<T> {
      * @return
      */
     public static <T> ResponseBody<T> success(T data) {
-        ResponseBody<T> responseBody = new ResponseBody<T>(ResponseStatusCode.CREATED, data);
+        ResponseBody<T> responseBody = new ResponseBody<T>(ResponseStatusCode.SUCCESS, data);
         return responseBody;
     }
 
